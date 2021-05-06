@@ -41,8 +41,7 @@ URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
 ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
 
-[Header Rewrite]
-#𝙌-𝙎𝙚𝙖𝙧𝙘𝙝-𝘼𝙡𝙡 𝙞𝙣 𝙤𝙣𝙚 
+# ＞ 𝙌-𝙎𝙚𝙖𝙧𝙘𝙝-𝘼𝙡𝙡 𝙞𝙣 𝙤𝙣𝙚 
 
 # gh：  GitHub搜索
 # gm：  Google图片搜索
