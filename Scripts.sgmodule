@@ -42,6 +42,126 @@ URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 ^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
 
 [Header Rewrite]
+#𝙌-𝙎𝙚𝙖𝙧𝙘𝙝-𝘼𝙡𝙡 𝙞𝙣 𝙤𝙣𝙚 
+
+# gh：  GitHub搜索
+# gm：  Google图片搜索
+# sof:  Stack Overflow
+# se:   StackExchange
+# wiki: 维基百科
+# wk:   维基中文
+# mg:   Magi
+# tf:   Google 搜索 TestFlight
+
+# yd：有道词典搜索
+# trc: Google 译至中
+# tre: Google 译至英
+# trj: Google 译至日
+
+# db：豆瓣搜索
+# zh: 知乎
+# wb: 微博
+# wx: 微信
+# rd: Reddit
+# ssp: 少数派
+# csdn: CSDN
+
+# zdm: 什么值得买
+# amz: 亚马逊
+# jd: 京东
+# tb: 淘宝
+# tm: 天猫
+
+# ac:  Acfun
+# bli: 哔哩哔哩
+# ytb: YouTube
+# ph:  PornHub 
+# gd:  Google Drive资源
+# tgd: TG搜索Google Drive资源
+ 
+# bi: 必应
+# bd：百度搜索
+# ddg：DuckDuckGo 搜索
+# 无指令则转 Google 搜索
+
+#gm   (Google图片)
+^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ https://www.google.com/search?&tbm=isch&q=$1 302
+# gh   (GitHub)
+^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ https://github.com/search?q=$1 302
+# sof  (Stack Overflow)
+^https:\/\/duckduckgo.com\/\?q=sof\+([^&]+).+ https://stackoverflow.com/search?q=$1 302
+# se  (StackExchange)
+^https:\/\/duckduckgo.com\/\?q=se\+([^&]+).+ https://stackexchange.com/search?q=$1 302
+# wa  (WolframAlpha)
+^https:\/\/duckduckgo.com\/\?q=wa\+([^&]+).+ https://www.wolframalpha.com/input/?i=$1 302
+# wiki  (维基百科)
+^https:\/\/duckduckgo.com\/\?q=wiki(\+|%20)([^&]+).+ http://wikipedia.org/wiki/$2 302
+# wk  (维基中文)
+^https:\/\/duckduckgo.com\/\?q=wk(\+|%20)([^&]+).+ https://zh.wikipedia.org/wiki/$2 302
+# mg  (Magi)
+^https:\/\/duckduckgo.com\/\?q=mg(\+|%20)([^&]+).+ https://magi.com/search?q=$2 302
+# tf  (Google 搜索 TestFlight)
+^https:\/\/duckduckgo.com\/\?q=tf(\+|%20)([^&]+).+ https://www.google.com/search?as_q=$2&as_sitesearch=testflight.apple.com 302
+# > 翻译
+# yd   (有道)
+^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
+# trc  (Google 译至中)
+^https:\/\/duckduckgo.com\/\?q=trc\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$1 302
+# tre  (Google 译至英)
+^https:\/\/duckduckgo.com\/\?q=tre\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$1 302
+# trj  (Google 译至日)
+^https:\/\/duckduckgo.com\/\?q=trj\+([^&]+).+ https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$1 302
+# 社区
+# db：豆瓣
+^https:\/\/duckduckgo.com\/\?q=db\+([^&]+).+ https://m.douban.com/search/?query=$1 302
+# zh: 知乎
+^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ https://www.zhihu.com/search?type=content&q=$1 302
+# wb: 微博
+^https:\/\/duckduckgo.com\/\?q=wb\+([^&]+).+ https://s.weibo.com/weibo/$1 302
+# wx: 微信
+^https:\/\/duckduckgo.com\/\?q=wx\+([^&]+).+ https://weixin.sogou.com/weixinwap?query=$1 302
+# rd  (Reddit)
+^https:\/\/duckduckgo.com\/\?q=rd\+([^&]+).+ https://www.reddit.com/search?q=$1 302
+# tw (Twitter)
+^https:\/\/duckduckgo.com\/\?q=tw\+([^&]+).+ https://twitter.com/search?q=$1 302
+# ssp: 少数派
+^https:\/\/duckduckgo.com\/\?q=ssp\+([^&]+).+ https://sspai.com/search/post/$1 302
+# csdn: CSDN
+^https:\/\/duckduckgo.com\/\?q=csdn\+([^&]+).+ https://so.csdn.net/so/search/s.do?q=$1&t=&u= 302
+# > 购物
+# zdm: 什么值得买
+^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ https://search.m.smzdm.com/?v=b&s=$1 302
+# amz: 亚马逊
+^https:\/\/duckduckgo.com\/\?q=amz\+([^&]+).+ https://www.amazon.cn/gp/aw/s/?k=$1 302
+# jd : 京东
+^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ https://so.m.jd.com/ware/search.action?keyword=$1 302
+# tb: 淘宝
+^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ https://s.m.taobao.com/h5?q=$1 302
+# tm: 天猫
+^https:\/\/duckduckgo.com\/\?q=tm\+([^&]+).+ https://s.m.tmall.com/m/search.htm?q=$1 302
+# 视频资源
+# ac (Acfun)
+^https:\/\/duckduckgo.com\/\?q=ac\+([^&]+).+ https://www.acfun.cn/search?keyword==$1 302
+# bli (哔哩哔哩) 
+^https:\/\/duckduckgo.com\/\?q=bli\+([^&]+).+ https://m.bilibili.com/search?keyword=$1 302
+# ytb  (YouTube)
+^https:\/\/duckduckgo.com\/\?q=ytb\+([^&]+).+ https://www.youtube.com/results?search_query=$1 302
+# ph  (PornHub) 
+^https:\/\/duckduckgo.com\/\?q=ph\+([^&]+).+ https://cn.pornhub.com/video/search?search=$1 302
+# gd  (Google Drive)
+^https:\/\/duckduckgo.com\/\?q=gd\+([^&]+).+ https://www.google.com/search?q=%22Google+Drive%22+$1 302
+# tgd  (t.me/gdurl 搜索 Google Drive 资源)
+^https:\/\/duckduckgo.com\/\?q=tgd\+([^&]+).+ https://t.me/s/gdurl?q=$1 302
+# 默认搜索
+# bi: 必应
+^https:\/\/duckduckgo.com\/\?q=bi\+([^&]+).+ https://cn.bing.com/search?q=$1 302
+# bd: 百度
+^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ https://www.baidu.com/s?wd=$1 302
+# ddg: DuckDuckGo 
+^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ https://duckduckgo.com/?ia=about&q=$1 302
+# 无指令: 谷歌
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.google.com/search?q=$1 302
+
 
 [Script]
 #TF Download
@@ -156,4 +276,4 @@ http-response ^https:\/\/api\.textnow\.me\/api2.0\/users\/.* script-path=https:/
 Xmin = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/(devices|user_sub_status|appstore/sub),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/xmind.js,script-update-interval=0
 
 [MITM]
-hostname = %APPEND% testflight.apple.com, *.caixin.com,api.m.jd.com,trade-acs.m.taobao.com, ios.prod.ftl.netflix.com , api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, *.amemv.com, mp.weixin.qq.com,  www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, vip1.kuwo.cn, p.du.163.com, vsco.co, newdrugs.dxy.cn, www.luqijianggushi.com, account.wps.cn, biz.caiyunapp.com, api.picsart.c*, api.meiease.c*, commerce-i18n-api.faceu.mobi,commerce, api.faceu.mobi,pay.wecut.com, api.interpreter.caiyunai.com, *.bjxkhc.com, snailsleep.net, music.snailsleep.net, community.snailsleep.net, avoscloud.com, api.meiyan.com, api.flexibits.com, api.revenuecat.com, app.api.versa-ai.com, vira.llsapp.com, dict.eudic.net, greasyfork.org, openuserjs.org, lcs-mobile-cops.adobe.io, backend.getdrafts.com, education.github.com, apic.musixmatch.com, license.pdfexpert.com, photos.adobe.io, api.memrise.com, buy.itunes.apple.com, api.textnow.me, *.xmind.*
+hostname = %APPEND% duckduckgo.com, testflight.apple.com, *.caixin.com,api.m.jd.com,trade-acs.m.taobao.com, ios.prod.ftl.netflix.com , api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, *.amemv.com, mp.weixin.qq.com,  www.zhihu.com, api.zhihu.com, link.zhihu.com, 118.89.204.198, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, vip1.kuwo.cn, p.du.163.com, vsco.co, newdrugs.dxy.cn, www.luqijianggushi.com, account.wps.cn, biz.caiyunapp.com, api.picsart.c*, api.meiease.c*, commerce-i18n-api.faceu.mobi,commerce, api.faceu.mobi,pay.wecut.com, api.interpreter.caiyunai.com, *.bjxkhc.com, snailsleep.net, music.snailsleep.net, community.snailsleep.net, avoscloud.com, api.meiyan.com, api.flexibits.com, api.revenuecat.com, app.api.versa-ai.com, vira.llsapp.com, dict.eudic.net, greasyfork.org, openuserjs.org, lcs-mobile-cops.adobe.io, backend.getdrafts.com, education.github.com, apic.musixmatch.com, license.pdfexpert.com, photos.adobe.io, api.memrise.com, buy.itunes.apple.com, api.textnow.me, *.xmind.*
