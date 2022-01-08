@@ -188,8 +188,8 @@ wb_ad.js = type=http-response,requires-body=1,max-size=-1,pattern=^https?://m?ap
 # > 抖音 & TikTok Remove Ad & Logo
 douyin_ad = type=http-response,pattern=^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,requires-body=1,max-size=-1,script-path=https://Choler.github.io/Surge/Script/douyin.js
 
-# > 微信公众号
-
+# > tf公测监控
+cron "0 0 * * * *" script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/testflight.js,tag=TestFlight公测监控
 # > 知乎 去广告
 zhihu people = type=http-response,requires-body=1,max-size=0,pattern=https://api.zhihu.com/people/,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20people.js
 zhihu feed = type=http-response,requires-body=1,max-size=0,pattern=https://api.zhihu.com/moments/recommend,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20feed.js
